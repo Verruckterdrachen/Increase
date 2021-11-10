@@ -549,7 +549,7 @@ textarea:focus {
     height: 100%;
     overflow: auto;
     padding: 120px 15px 40px 15px;
-    background-color: #f4f7ff;
+    background-color: #fff;
     transition: right 0.3s;
   }
   .menu__body_header::before {
@@ -559,14 +559,15 @@ textarea:focus {
     top: 0;
     right: -100%;
     width: 100%;
-    height: 80px;
-    background-color: #f4f7ff;
+    height: 81px;
+    background-color: #fff;
+    border-bottom: 1px solid #d8e3fe;
     transition: right 0.3s;
   }
 }
 @media (max-width: 991.98px) and (max-width: 767.98px) {
   .menu__body_header::before {
-    height: 60px;
+    height: 61px;
   }
 }
 @media (max-width: 991.98px) {
@@ -1144,4 +1145,83 @@ body.ie {
 
 .page {
   flex: 1 1 auto;
+}
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f7ff;
+  background-image: url("../img/hero/bg-0.svg"), url("../img/hero/bg-1.svg"), url("../img/hero/bg-2.svg"), url("../img/hero/bg-3.svg"), url("../img/hero/bg-4.svg"), url("../img/hero/bg-5.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 45%, 15% 20%, 15% 80%, 85% 15%, 75% 90%, 100% 80%;
+}
+.hero__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+.hero__body {
+  text-align: center;
+  max-width: 598px;
+  padding: 120px 0;
+}
+.hero__body > *:last-child {
+  margin-bottom: 0;
+}
+.hero__label {
+  font-weight: 500;
+  font-family: "Roboto";
+  color: #3d4f9f;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 120%;
+  margin: 0 0 1.6em 0;
+}
+.hero__title {
+  color: #3d4f9f;
+  font-size: 48px;
+  line-height: 125%;
+  margin: 0 0 0.5833333333em 0;
+}
+@media (max-width: 1200px) {
+  .hero__title {
+    font-size: calc(36px + 12 * ((100vw - 320px) / 880));
+  }
+}
+.hero__title span {
+  font-weight: 700;
+}
+.hero__text {
+  color: #8d96bd;
+  font-size: 15px;
+  line-height: 186.6666666667%;
+  margin: 0 0 1.3333333333em 0;
+  letter-spacing: 0.1133333333em;
+  font-family: "Roboto";
+}
+.hero__button {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: background-color 0.3s;
+  box-shadow: 0px 10px 50px 0px #c9d1e799;
+}
+.hero__button::before {
+  color: #5e81ff;
+  transition: color 0.3s;
+  font-size: 11px;
+}
+@media (any-hover: hover) {
+  .hero__button:hover {
+    background-color: #5e81ff;
+  }
+  .hero__button:hover::before {
+    color: #fff;
+  }
 }

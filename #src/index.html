@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{
-"title":"Главная"
+"title":"Home"
 })
 
 <body>
 	<div class="wrapper">
 		@@include('_header.html',{})
 		<main class="page">
-
+			<section class="page__hero hero">
+				<div class="hero__container _container">
+					<div class="hero__body">
+						<h2 class="hero__label">Plan your life</h2>
+						<h1 class="hero__title">Increase your <span>productivity</span></h1>
+						<p class="hero__text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui
+							laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+						<button type="button" class="hero__button _icon-play"></button>
+					</div>
+				</div>
+			</section>
 		</main>
 		@@include('_footer.html',{})
 	</div>
