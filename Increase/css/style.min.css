@@ -1062,7 +1062,6 @@ body.ie {
 .footer {
   padding-top: 93px;
   padding-bottom: 93px;
-  border-top: 1px solid #d8e3fe;
 }
 @media (max-width: 1200px) {
   .footer {
@@ -1146,10 +1145,14 @@ body.ie {
 .page {
   flex: 1 1 auto;
 }
+.page > * {
+  border-bottom: 1px solid #d8e3fe;
+}
 .hero {
   position: relative;
   display: flex;
   min-height: 100vh;
+  border-bottom: 1px solid #d8e3fe;
   background-color: #f4f7ff;
   background-image: url("../img/hero/bg-0.svg"), url("../img/hero/bg-1.svg"), url("../img/hero/bg-2.svg"), url("../img/hero/bg-3.svg"), url("../img/hero/bg-4.svg"), url("../img/hero/bg-5.svg");
   background-repeat: no-repeat;
@@ -1223,5 +1226,45 @@ body.ie {
   }
   .hero__button:hover::before {
     color: #fff;
+  }
+}
+
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (max-width: 1200px) {
+  .customers {
+    padding-top: calc(30px + 30 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .customers {
+    padding-bottom: calc(30px + 30 * ((100vw - 320px) / 880));
+  }
+}
+.customers__container {
+  max-width: 900px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 76px;
+  grid-template-columns: repeat(auto-fit, minmax(117px, 1fr));
+}
+@media (max-width: 1200px) {
+  .customers__container {
+    gap: calc(36px + 40 * ((100vw - 320px) / 880));
+  }
+}
+.customers__item {
+  color: #d6dae5;
+  transition: color 0.3s;
+}
+.customers__item path {
+  fill: currentColor;
+}
+@media (any-hover: hover) {
+  .customers__item:hover {
+    color: #5982e7;
   }
 }

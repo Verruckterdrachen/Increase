@@ -82,8 +82,14 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+	& > * {
+		border-bottom: 1px solid #d8e3fe;
+	}
 	// .page__hero
 	&__hero {
+	}
+	// .page__customers
+	&__customers {
 	}
 }
 //===================================================================================================================================
@@ -91,6 +97,7 @@ body {
 	position: relative;
 	display: flex;
 	min-height: 100vh;
+	border-bottom: 1px solid #d8e3fe;
 	background-color: #f4f7ff;
 	background-image: url("../img/hero/bg-0.svg"), url("../img/hero/bg-1.svg"), url("../img/hero/bg-2.svg"),
 		url("../img/hero/bg-3.svg"), url("../img/hero/bg-4.svg"), url("../img/hero/bg-5.svg");
@@ -162,6 +169,33 @@ body {
 				&::before {
 					color: #fff;
 				}
+			}
+		}
+	}
+}
+//====================================================================================================
+.customers {
+	@include adaptiv-value("padding-top", 60, 30, 1);
+	@include adaptiv-value("padding-bottom", 60, 30, 1);
+	// .customers__container
+	&__container {
+		max-width: 900px;
+		display: grid;
+		justify-items: center;
+		align-items: center;
+		@include adaptiv-value("gap", 76, 36, 1);
+		grid-template-columns: repeat(auto-fit, minmax(117px, 1fr));
+	}
+	// .customers__item
+	&__item {
+		color: #d6dae5;
+		transition: color 0.3s;
+		path {
+			fill: currentColor;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #5982e7;
 			}
 		}
 	}
