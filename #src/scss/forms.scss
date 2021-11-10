@@ -7,6 +7,7 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+	min-width: 113px;
 	min-height: 43px;
 	padding: 0 16px;
 	border-radius: 2px;
@@ -23,6 +24,21 @@
 			&:hover {
 				color: #d2e1ff;
 				background-color: #3a79ff;
+			}
+		}
+	}
+	// .button_red
+	&_red {
+		font-size: 13px;
+		line-height: math.div(16, 13) * 100%;
+		font-weight: 700;
+		color: #d43f3f;
+		background-color: #ffd7d7;
+		transition: color 0.3s, background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #ffd7d7;
+				background-color: #d43f3f;
 			}
 		}
 	}

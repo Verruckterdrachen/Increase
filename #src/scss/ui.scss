@@ -154,6 +154,24 @@
 	font-size: 10px;
 	line-height: math.div(12, 10) * 100%;
 }
+.heading {
+	text-align: center;
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+	// .heading__label
+	&__label {
+		margin: 0 0 math.div(20, 12) * 1em 0;
+	}
+	// .heading__title
+	&__title {
+		font-weight: 500;
+		color: #3d4f9f;
+		font-size: 24px;
+		line-height: math.div(30, 24) * 100%;
+		margin: 0 0 math.div(20, 24) * 1em 0;
+	}
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
