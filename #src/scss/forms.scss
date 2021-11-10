@@ -4,6 +4,32 @@
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 43px;
+	padding: 0 16px;
+	border-radius: 2px;
+	text-align: center;
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+	// .button_blue
+	&_blue {
+		font-size: 13px;
+		line-height: math.div(16, 13) * 100%;
+		font-weight: 700;
+		color: #3a79ff;
+		background-color: #d2e1ff;
+		transition: color 0.3s, background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #d2e1ff;
+				background-color: #3a79ff;
+			}
+		}
+	}
 }
 //</BUTTONS>====================================================================================================
 
