@@ -690,6 +690,15 @@ textarea:focus {
   }
 }
 
+.label {
+  font-weight: 500;
+  font-family: "Roboto";
+  color: #3d4f9f;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 120%;
+}
+
 /*
 .row:after {
 	display: block;
@@ -1173,12 +1182,6 @@ body.ie {
   margin-bottom: 0;
 }
 .hero__label {
-  font-weight: 500;
-  font-family: "Roboto";
-  color: #3d4f9f;
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 120%;
   margin: 0 0 1.6em 0;
 }
 .hero__title {
@@ -1266,5 +1269,113 @@ body.ie {
 @media (any-hover: hover) {
   .customers__item:hover {
     color: #5982e7;
+  }
+}
+
+.manage {
+  background-color: #f5f8ff;
+}
+.manage__container {
+  max-width: 930px;
+  padding: 0;
+}
+@media (min-width: 767.98px) {
+  .manage__container {
+    display: flex;
+  }
+}
+.manage__content {
+  display: grid;
+  align-content: center;
+  min-width: 45%;
+  padding: 40px 15px;
+}
+.manage__label {
+  margin: 0 0 2.25em 0;
+}
+.manage__title {
+  color: #3d4f9f;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 116.6666666667%;
+  margin: 0 0 0.75em 0;
+}
+@media (max-width: 1200px) {
+  .manage__title {
+    font-size: calc(28px + 8 * ((100vw - 320px) / 880));
+  }
+}
+.manage__title span {
+  font-weight: 400;
+}
+.manage__text {
+  color: #8d96bd;
+  font-size: 15px;
+  line-height: 186.6666666667%;
+  margin: 0 0 3.1333333333em 0;
+  font-family: "Roboto";
+}
+.manage__actions {
+  display: flex;
+  align-items: center;
+}
+.manage__actions > * {
+  min-width: 130px;
+}
+@media (max-width: 479.98px) {
+  .manage__actions {
+    flex-wrap: wrap;
+  }
+}
+.manage__button {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  font-weight: 700;
+  color: #fff;
+  background-color: #4c85ff;
+  transition: background-color 0.3s;
+  border-radius: 2px 0 0 2px;
+}
+.manage__button::before {
+  font-size: 8px;
+  padding: 0 0 0 6px;
+}
+@media (any-hover: hover) {
+  .manage__button:hover {
+    background-color: #3374ff;
+  }
+}
+@media (max-width: 479.98px) {
+  .manage__button {
+    flex: 0 0 100%;
+    border-radius: 0;
+  }
+}
+.manage__link {
+  font-weight: 500;
+  color: #adb4d2;
+  border: 1px solid #d1d1e4;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 0 2px 2px 0;
+}
+@media (any-hover: hover) {
+  .manage__link:hover {
+    color: #fff;
+    background-color: #d1d1e4;
+  }
+}
+@media (max-width: 479.98px) {
+  .manage__link {
+    flex: 0 0 100%;
+    border-radius: 0;
+  }
+}
+.manage__image img {
+  transform: translate(-95px, 85px);
+}
+@media (max-width: 767.98px) {
+  .manage__image {
+    display: none;
   }
 }
