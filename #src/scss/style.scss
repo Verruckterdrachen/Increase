@@ -97,6 +97,9 @@ body {
 	// .page__features
 	&__features {
 	}
+	// .page__stats
+	&__stats {
+	}
 }
 //===================================================================================================================================
 .hero {
@@ -421,5 +424,63 @@ body {
 	}
 }
 //====================================================================================================
-
+.stats {
+	// .stats__container
+	&__container {
+		display: flex;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+		@media (max-width: $md4+px) {
+			flex-wrap: wrap;
+		}
+	}
+	// .stats__item
+	&__item {
+		flex: 0 1 50%;
+		@include adaptiv-value("padding-top", 64, 30, 1);
+		@include adaptiv-value("padding-bottom", 64, 30, 1);
+		&:first-child {
+			color: #fff;
+			text-align: right;
+			padding-left: 15px;
+			@include adaptiv-value("padding-right", 90, 15, 1);
+			background: linear-gradient(229.32deg, #6888ff 12.77%, #5e80ff 73.11%);
+			.stats__text {
+				margin-left: auto;
+			}
+		}
+		&:last-child {
+			color: #5e80ff;
+			padding-right: 15px;
+			@include adaptiv-value("padding-left", 90, 15, 1);
+			background: linear-gradient(101.48deg, #e9efff 41.56%, #e0e9ff 81.53%);
+		}
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+		@media (max-width: $md4+px) {
+			flex: 0 0 100%;
+		}
+	}
+	// .stats__icon
+	&__icon {
+		margin: 0 0 15px 0;
+	}
+	// .stats__title
+	&__title {
+		@include adaptiv-value("font-size", 48, 32, 1);
+		line-height: math.div(83, 48) * 100%;
+		margin: 0 0 math.div(20, 48) * 1em 0;
+		letter-spacing: math.div(1.5, 48) * 1em;
+	}
+	// .stats__text
+	&__text {
+		max-width: 260px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: math.div(24, 18) * 100%;
+		margin: 0 0 math.div(20, 18) * 1em 0;
+	}
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
