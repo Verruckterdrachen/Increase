@@ -172,6 +172,51 @@
 		margin: 0 0 math.div(20, 24) * 1em 0;
 	}
 }
+//====================================================================================================
+.slider-arrow {
+	color: #a8b4e5;
+	cursor: pointer;
+	pointer-events: auto;
+	transition: color 0.3s ease 0s;
+	&_prev {
+		&::before {
+			transform: rotate(-180deg);
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: #6888ff;
+		}
+	}
+}
+.slider-bullets {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.slider-bullet {
+	flex: 0 0 8px;
+	height: 8px;
+	background-color: #d1d6e3;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	transition: background-color 0.3s ease 0s;
+	&:not(:last-child) {
+		margin: 0 12px 0 0;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #5283ff;
+		}
+	}
+	&_active {
+		background-color: #5283ff;
+	}
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
