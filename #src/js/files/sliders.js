@@ -63,8 +63,8 @@ function sliders_bild_callback(params) { }
 
 if (document.querySelector('.slider-blog__body')) {
 	let blogSlider = new Swiper('.slider-blog__body', {
+		autoHeight: true,
 		watchOverflow: true,
-		parallax: true,
 		loop: true,
 		autoplay: {
 			delay: 2000,
@@ -90,6 +90,28 @@ if (document.querySelector('.slider-blog__body')) {
 				slidesPerView: 1,
 				spaceBetween: 124,
 			}
+		},
+	});
+}
+
+if (document.querySelector('.slider-testimonials__body')) {
+	let testimonialsSlider = new Swiper('.slider-testimonials__body', {
+		autoHeight: true,
+		observer: true,
+		observeParents: true,
+		spaceBetween: 64,
+		watchOverflow: true,
+		loop: true,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		speed: 1000,
+		pagination: {
+			el: '.slider-testimonials__bullets',
+			bulletClass: 'slider-bullet',
+			bulletActiveClass: 'slider-bullet_active',
+			clickable: true,
 		},
 	});
 }
