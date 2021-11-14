@@ -106,6 +106,9 @@ body {
 	// .page__testimonials
 	&__testimonials {
 	}
+	// .page__questions
+	&__questions {
+	}
 }
 //===================================================================================================================================
 .hero {
@@ -797,4 +800,88 @@ body {
 		position: relative;
 	}
 }
+//====================================================================================================
+.questions {
+	@include adaptiv-value("padding-top", 176, 40, 1);
+	@include adaptiv-value("padding-bottom", 176, 40, 1);
+	// .questions__container
+	&__container {
+		@media (min-width: 744px) {
+			max-width: 744px;
+		}
+	}
+	// .questions__heading
+	&__heading {
+		@include adaptiv-value("margin-bottom", 70, 30, 1);
+	}
+	// .questions__body
+	&__body {
+		@media (max-width: $md4+px) {
+			margin: 0 -15px;
+		}
+	}
+}
+.item-questions {
+	padding: 30px 20px;
+	border-bottom: 1px solid #d8e3fe;
+	@media (max-width: $md3+px) {
+		padding: 15px;
+	}
+	// .item-questions__title
+	&__title {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 130%;
+		color: #8e96b7;
+		transition: color 0.3s;
+		&::before {
+			margin: 0 24px 0 0;
+			font-size: 7px;
+			transition: transform 0.3s;
+		}
+		&._active {
+			color: #495274;
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	// .item-questions__content
+	&__content {
+		padding-top: 25px;
+		padding-left: 15px;
+		@media (min-width: $md3+px) {
+			@include adaptiv-value("padding-left", 70, 0, 1);
+		}
+	}
+	// .item-questions__text
+	&__text {
+		font-size: 14px;
+		line-height: 190%;
+		font-family: "Roboto";
+		color: #8d96bd;
+		padding-bottom: 20px;
+		@media (min-width: $md3+px) {
+			display: inline-block;
+			max-width: 390px;
+			padding-bottom: 0;
+			@include adaptiv-value("padding-right", 30, 0, 1);
+		}
+	}
+	// .item-questions__button
+	&__button {
+		font-weight: 500;
+		color: #7382a3;
+		background-color: #e8ecf4;
+		padding: 0 30px;
+		@media (min-width: $md3+px) {
+			vertical-align: top;
+		}
+	}
+}
+//====================================================================================================
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================

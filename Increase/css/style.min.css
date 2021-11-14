@@ -2088,3 +2088,112 @@ body.ie {
   z-index: 5;
   position: relative;
 }
+
+.questions {
+  padding-top: 176px;
+  padding-bottom: 176px;
+}
+@media (max-width: 1200px) {
+  .questions {
+    padding-top: calc(40px + 136 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .questions {
+    padding-bottom: calc(40px + 136 * ((100vw - 320px) / 880));
+  }
+}
+@media (min-width: 744px) {
+  .questions__container {
+    max-width: 744px;
+  }
+}
+.questions__heading {
+  margin-bottom: 70px;
+}
+@media (max-width: 1200px) {
+  .questions__heading {
+    margin-bottom: calc(30px + 40 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 479.98px) {
+  .questions__body {
+    margin: 0 -15px;
+  }
+}
+
+.item-questions {
+  padding: 30px 20px;
+  border-bottom: 1px solid #d8e3fe;
+}
+@media (max-width: 767.98px) {
+  .item-questions {
+    padding: 15px;
+  }
+}
+.item-questions__title {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 130%;
+  color: #8e96b7;
+  transition: color 0.3s;
+}
+.item-questions__title::before {
+  margin: 0 24px 0 0;
+  font-size: 7px;
+  transition: transform 0.3s;
+}
+.item-questions__title._active {
+  color: #495274;
+}
+.item-questions__title._active::before {
+  transform: rotate(180deg);
+}
+.item-questions__content {
+  padding-top: 25px;
+  padding-left: 15px;
+}
+@media (min-width: 767.98px) {
+  .item-questions__content {
+    padding-left: 70px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1200px) {
+  .item-questions__content {
+    padding-left: calc(0px + 70 * ((100vw - 320px) / 880));
+  }
+}
+.item-questions__text {
+  font-size: 14px;
+  line-height: 190%;
+  font-family: "Roboto";
+  color: #8d96bd;
+  padding-bottom: 20px;
+}
+@media (min-width: 767.98px) {
+  .item-questions__text {
+    display: inline-block;
+    max-width: 390px;
+    padding-bottom: 0;
+    padding-right: 30px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1200px) {
+  .item-questions__text {
+    padding-right: calc(0px + 30 * ((100vw - 320px) / 880));
+  }
+}
+.item-questions__button {
+  font-weight: 500;
+  color: #7382a3;
+  background-color: #e8ecf4;
+  padding: 0 30px;
+}
+@media (min-width: 767.98px) {
+  .item-questions__button {
+    vertical-align: top;
+  }
+}
